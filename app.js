@@ -1,6 +1,7 @@
 var request = require('request');
-request('http://www.google.com', function (error, response, body) {
+request('https://www.goodreads.com/book/title.xml?key=M0mPzFH0hVT5EgajAgrA&title=Harry+Potter' , function (error, response, body) {
   if (!error && response.statusCode == 200) {
-    console.log(body) // Show the HTML for the Google homepage. 
+    //var parsedData = JSON.parse(body);
+    console.log(xmlDoc.getElementsByTagName("title"));  
   }
 })
