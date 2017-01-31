@@ -1,0 +1,19 @@
+{
+  "name": "whichbook",
+  "version": "1.0.0",
+  "description": "App to compare Goodreads book scores using the Goodreads api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mordmaman/whichbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mordmaman/whichbook/issues"
+  },
+  "homepage": "https://github.com/mordmaman/whichbook#readme"
+}
