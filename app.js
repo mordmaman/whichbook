@@ -4,15 +4,18 @@ var express = require('express');
 var app = express();
 
 
-app.get('/search', function(req, res) {
-    axios.get('https://www.goodreads.com/book/title.xml?key=M0mPzFH0hVT5EgajAgrA&title=Harry+Potter')
+app.get('/search', function (req, res) {
+  axios.get('https://www.goodreads.com/book/title.xml?key=M0mPzFH0hVT5EgajAgrA&title=Harry+Potter')
     .then(function (response) {
       parseString(response.data, function (err, result) {
-        console.log(result.GoodreadsResponse.book[0].average_rating[0]);
+        var rating = result.GoodreadsResponse.book[0].average_rating[0];
+        res.send(rating);
       });
     });
-  });
+});
 
+
+app.use(express.static('public'))
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
